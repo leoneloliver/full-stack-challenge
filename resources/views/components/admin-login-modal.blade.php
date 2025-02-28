@@ -1,4 +1,3 @@
-<!-- admin-login-modal.blade.php -->
 <div
     x-data="adminLoginModal()"
     x-show="isOpen"
@@ -82,6 +81,7 @@
                                         type="password"
                                         id="password"
                                         x-model="password"
+                                        x-bind:type="showPassword ? 'text' : 'password'"
                                         class="pl-10 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md py-2"
                                         placeholder="admin"
                                         autocomplete="current-password"
@@ -89,7 +89,7 @@
                                     <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
                                         <button
                                             type="button"
-                                            @click="showPassword = !showPassword; $el.previousElementSibling.type = showPassword ? 'text' : 'password'"
+                                            @click="showPassword = !showPassword"
                                             class="text-gray-400 hover:text-gray-500 focus:outline-none">
                                             <svg x-show="!showPassword" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                                 <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />

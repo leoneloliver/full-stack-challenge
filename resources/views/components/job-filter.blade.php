@@ -1,8 +1,6 @@
-<!-- resources/views/components/job-filter.blade.php -->
 <div class="bg-white p-6 rounded-lg shadow-lg mb-6" role="region" aria-labelledby="filter-heading">
     <h3 id="filter-heading" class="text-lg font-semibold text-gray-800 mb-4">Filter Jobs</h3>
 
-    <!-- Position Type Filter -->
     <fieldset class="mb-4">
         <legend class="block text-gray-600 font-medium mb-2">Position Type</legend>
         <div class="flex flex-wrap gap-2" role="radiogroup" aria-labelledby="position-type-group">
@@ -36,7 +34,6 @@
         </div>
     </fieldset>
 
-    <!-- Salary Range Filter -->
     <div class="mb-4">
         <fieldset>
             <legend class="block text-gray-600 font-medium mb-2">Salary Range</legend>
@@ -68,7 +65,6 @@
         </fieldset>
     </div>
 
-    <!-- Company Filter -->
     <div class="mb-4">
         <label for="company-filter" class="block text-gray-600 font-medium mb-2">Company</label>
         <select id="company-filter"
@@ -82,7 +78,6 @@
         </select>
     </div>
 
-    <!-- Location Filter -->
     <div class="mb-4">
         <label for="location-filter" class="block text-gray-600 font-medium mb-2">Location</label>
         <select id="location-filter"
@@ -96,7 +91,6 @@
         </select>
     </div>
 
-    <!-- Reset Filters Button -->
     <button @click="resetFilters()"
         type="button"
         aria-label="Reset all filters"

@@ -1,4 +1,3 @@
-{{-- resources/views/components/header.blade.php --}}
 <header class="flex justify-between items-center mb-4 mt-8">
     <!-- Logo -->
     <div class="w-56">

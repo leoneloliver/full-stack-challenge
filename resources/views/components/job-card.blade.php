@@ -1,4 +1,3 @@
-<!-- resources/views/components/job-card.blade.php -->
 <article class="bg-white p-6 rounded-lg shadow-lg mb-6 hover:shadow-xl transition-all duration-300 ease-in-out"
     x-data="{ showDetails: false }"
     :id="'job-' + job.id">
@@ -27,7 +26,6 @@
         </div>
     </dl>
 
-    <!-- Hidden details section that appears on click -->
     <div x-show="showDetails"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform -translate-y-2"
@@ -51,7 +49,6 @@
         </dl>
     </div>
 
-    <!-- Toggle button -->
     <button @click="showDetails = !showDetails"
         :aria-expanded="showDetails ? 'true' : 'false'"
         :aria-controls="'job-details-' + job.id"

@@ -1,4 +1,3 @@
-<!-- resources/views/components/job-search.blade.php -->
 <div class="mb-6">
     <div class="relative">
         <label for="job-search" class="sr-only">Search job titles</label>
@@ -16,7 +15,7 @@
             </svg>
         </div>
     </div>
-    <!-- Results counter -->
+
     <p id="search-description" class="text-gray-600 mt-2" aria-live="polite">
         <span x-text="jobs.length"></span> jobs found
     </p>

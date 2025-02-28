@@ -28,7 +28,7 @@
 
         <main id="main-content" x-data="initJobListings()" x-init="init()">
             <div id="job-listings-container" class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <!-- Sidebar with filters -->
+                <!-- Filters -->
                 <aside class="md:col-span-1">
                     <div id="filter-sidebar" class="w-full">
                         <x-job-filter />
