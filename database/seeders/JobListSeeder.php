@@ -49,7 +49,7 @@ class JobListSeeder extends Seeder {
                     'title' => 'Marketing Specialist',
                     'position_type' => 'Remote',
                     'salary' => '$60,000 - $80,000',
-                    'location' => 'Remote',
+                    'location' => 'New York, NY',
                     'description' => 'Develop and execute marketing campaigns focused on promoting sustainable technologies and environmental initiatives. The marketing specialist will create compelling content, manage social media accounts, coordinate email marketing efforts, and analyze campaign performance metrics. Key responsibilities include conducting market research, identifying target audiences, collaborating with design teams, and optimizing marketing strategies based on data insights. The ideal candidate will have a strong understanding of digital marketing principles, excellent writing skills, and a passion for environmental sustainability. Experience with marketing automation tools, SEO techniques, and analytics platforms is highly desired for this position.',
                 ],
             ],
