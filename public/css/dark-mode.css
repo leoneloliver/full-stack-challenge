@@ -1,0 +1,72 @@
+html.dark-theme body {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+html.dark-theme .bg-white {
+    background-color: #2d3748 !important;
+}
+
+html.dark-theme .text-gray-800 {
+    color: #f7fafc !important;
+}
+
+html.dark-theme .text-gray-600 {
+    color: #cbd5e0 !important;
+}
+
+html.dark-theme .border-gray-200 {
+    border-color: #4a5568 !important;
+}
+
+html.dark-theme .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
+}
+
+html.dark-theme .text-indigo-700 {
+    color: #a3bffa !important;
+}
+
+html.dark-theme .bg-indigo-100 {
+    background-color: #434190 !important;
+}
+
+html.dark-theme .hover\:bg-indigo-200:hover {
+    background-color: #5a67d8 !important;
+}
+
+html.dark-theme .posted{
+    background-color: #1a202d;
+    color: #999;
+}
+
+/* Smooth transitions */
+body, div, p, h1, h2, button, input {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+input, select{
+    color: #333;
+}
+
+.sticky-sidebar {
+    position: fixed;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    z-index: 10;
+    width: calc(25% - 18px);
+}
+
+#filter-sidebar {
+    transition: top 0.3s ease;
+}
+
+@media (max-width: 767px) {
+    .sticky-sidebar {
+        position: static;
+        max-height: none;
+        overflow-y: visible;
+        width: 100%;
+    }
+}

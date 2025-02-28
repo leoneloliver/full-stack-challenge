@@ -1,1 +1,40 @@
+# Laravel & PHP
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+/.env
+/.idea
+/.vscode
+/.phpunit.result.cache
+/.composer
+/.nvm
+/.yarn
+/.env.local
+/.env.*.local
+/phpunit.xml
+/phpunit.xml.dist
+/.php_cs.dist
+/.php_cs.cache
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# IDE & Editor files
 .idea/
+.vscode/
+
+# Laravel compiled files
+/bootstrap/cache/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# JetBrains specific files
+.idea
+
+# NPM & Yarn
+npm-debug.log
+yarn-error.log
