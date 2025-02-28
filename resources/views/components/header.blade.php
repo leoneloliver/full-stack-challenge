@@ -11,7 +11,7 @@
         <button
             x-show="isAdmin"
             onclick="localStorage.removeItem('isAdminLoggedIn'); window.location.href = '/';"
-            class="mr-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+            class="mr-4 px-4 py-2 bg-indigo-100 text-indigo-700 rounded-md hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             Logout
         </button>
 

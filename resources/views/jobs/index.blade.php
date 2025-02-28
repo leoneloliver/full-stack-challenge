@@ -8,7 +8,7 @@
     <title>Wise Jobs - Find Your Next Career Opportunity</title>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="{{ asset('css/dark-mode.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <script src="{{ asset('js/job-listings.js') }}"></script>
     <script src="{{ asset('js/dark-mode.js') }}"></script>
     <script src="{{ asset('js/scroll.js') }}"></script>
@@ -16,9 +16,7 @@
 </head>
 
 <body class="bg-gray-100">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolutefocus:z-50
-
-    mt-3 items-center p-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200">Skip to main content</a>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolutefocus:z-50 mt-3 items-center p-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200">Skip to main content</a>
 
     <div class="container mx-auto p-6 pt-0" x-data="initDarkMode()" x-init="init()">
 

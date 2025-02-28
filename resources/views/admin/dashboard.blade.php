@@ -8,7 +8,7 @@
     <title>Wise Jobs - Admin Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="{{ asset('css/dark-mode.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <script src="{{ asset('js/dark-mode.js') }}"></script>
     <script src="{{ asset('js/admin-login.js') }}"></script>
 
@@ -82,7 +82,7 @@
 
         <main id="main-content" class="bg-white shadow-md rounded-lg p-8 mb-8" x-data="companyManagement()">
             <div class="flex justify-between items-center mb-6">
-                <h1 class="text-2xl font-bold text-gray-900">Companies / Jobs</h1>
+                <h1 class="text-2xl font-bold text-gray-600">Companies / Jobs</h1>
 
             </div>
 
@@ -122,15 +122,15 @@
                         <template x-for="company in filteredCompanies" :key="company.id">
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-medium text-gray-900" x-text="company.name"></div>
+                                    <div class="text-sm font-medium text-gray-600" x-text="company.name"></div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-500" x-text="company.jobCount + ' jobs'"></div>
+                                    <div class="text-sm text-gray-600" x-text="company.jobCount + ' jobs'"></div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <button
                                         @click="$dispatch('open-company-details', company)"
-                                        class="text-blue-600 hover:text-blue-900 mr-3">
+                                        class="text-indigo-600 hover:text-indigo-900 mr-3">
                                         View Details
                                     </button>
 

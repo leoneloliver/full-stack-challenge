@@ -40,6 +40,33 @@ html.dark-theme .posted{
     color: #999;
 }
 
+html.dark-theme thead{
+    background: #1a202c;
+}
+
+html.dark-theme thead .text-gray-500{
+    color: #efefef;
+}
+
+html.dark-theme th {
+    border-bottom: 1px solid #5a67d8;
+}
+
+html.dark-theme button.text-indigo-600 {
+    color: #5a67d8;
+}
+
+html.dark-theme button.text-indigo-600:hover {
+    color: #efefef;
+}
+
+html.dark-theme .bg-gray-50, html.dark-theme .bg-indigo-50 {
+    background: #1a202c;
+}
+html.dark-theme .bg-indigo-50 {
+background: #252c3a;
+}
+
 /* Smooth transitions */
 body, div, p, h1, h2, button, input {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
