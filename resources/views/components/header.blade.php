@@ -1,4 +1,4 @@
-<header class="flex justify-between items-center mb-4 mt-8">
+<header class="flex justify-between items-center mb-4 mt-8" x-data="{ isAdmin: false }" x-init="isAdmin = localStorage.getItem('isAdminLoggedIn') === 'true'">
     <!-- Logo -->
     <div class="w-56">
         <a href="/">
@@ -6,14 +6,24 @@
         </a>
     </div>
 
-    <!-- Dark mode toggle -->
     <div class="flex justify-end mb-6 items-center">
+        <!-- Logout button -->
         <button
+            x-show="isAdmin"
+            onclick="localStorage.removeItem('isAdminLoggedIn'); window.location.href = '/';"
+            class="mr-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+            Logout
+        </button>
+
+        <!-- Login button -->
+        <button
+            x-show="!isAdmin"
             @click="$dispatch('open-admin-modal')"
             class="mr-4 px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             Login as Admin
         </button>
 
+        <!-- Dark mode toggle -->
         <button @click="toggleDarkMode()"
             aria-label="Toggle dark mode"
             class="p-2 rounded-lg bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
