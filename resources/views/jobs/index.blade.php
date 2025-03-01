@@ -20,7 +20,7 @@
 
     <div class="container mx-auto p-6 pt-0" x-data="initDarkMode()" x-init="init()">
 
-        <x-header />
+        <x-common.header />
 
         <h1 class="text-xl text-gray-700 font-semibold mb-4 ml-4">Job Listings</h1>
 
@@ -29,13 +29,13 @@
                 <!-- Filters -->
                 <aside class="md:col-span-1">
                     <div id="filter-sidebar" class="w-full">
-                        <x-job-filter />
+                        <x-user.filter />
                     </div>
                 </aside>
 
                 <div class="md:col-span-3">
                     <!-- Search Component -->
-                    <x-job-search />
+                    <x-user.search />
 
                     <div role="status" aria-live="polite">
                         <div x-show="jobs.length > 0">
@@ -43,7 +43,7 @@
                             <ul class="list-none p-0">
                                 <template x-for="job in jobs" :key="job.id">
                                     <li>
-                                        <x-job-card />
+                                        <x-user.card />
                                     </li>
                                 </template>
                             </ul>
@@ -62,8 +62,8 @@
         </main>
     </div>
     <!-- Footer component -->
-    <x-footer />
-    <x-admin-login-modal />
+    <x-common.footer />
+    <x-user.login-modal />
 </body>
 
 </html>

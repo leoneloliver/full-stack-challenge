@@ -18,20 +18,20 @@
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolutefocus:z-50
     mt-3 items-center p-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200">Skip to main content</a>
     <div class="container mx-auto p-6 pt-0" x-data="initDarkMode()" x-init="init()">
-        <x-header />
+        <x-common.header />
         <main id="main-content" class="bg-white shadow-md rounded-lg p-8 mb-8" x-data="companyManagement()">
             <div class="flex justify-between items-center mb-6">
                 <h1 class="text-2xl font-bold text-gray-600">Companies / Jobs</h1>
             </div>
             <!-- Search bar -->
-            <x-admin-search />
+            <x-admin.search />
             <!-- Companies list -->
-            <x-admin-company-list />
+            <x-admin.company-list />
         </main>
     </div>
     <!-- Footer component -->
-    <x-footer />
-    <x-admin-company-details-modal />
+    <x-common.footer />
+    <x-admin.company-details-modal />
     <script src="{{ asset('js/admin-company-details.js') }}"></script>
 </body>
 
