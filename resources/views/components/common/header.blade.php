@@ -20,7 +20,7 @@
             x-show="!isAdmin"
             @click="$dispatch('open-admin-modal')"
             class="mr-4 px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-            Login as Admin
+            Admin<span class="hidden sm:inline"> Login</span>
         </button>
 
         <!-- Dark mode toggle -->

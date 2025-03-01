@@ -61,8 +61,6 @@
             </div>
         </main>
     </div>
-    <!-- Footer component -->
-    <x-common.footer />
     <x-user.login-modal />
 </body>
 
