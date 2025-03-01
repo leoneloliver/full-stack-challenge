@@ -74,6 +74,12 @@ body, div, p, h1, h2, button, input {
 
 input, select{
     color: #333;
+    /* background-color: #1a202c; */
+}
+
+html.dark-theme input, html.dark-theme select{
+    color: #efefef;
+    background-color: #252c3a;
 }
 
 .sticky-sidebar {

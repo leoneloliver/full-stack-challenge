@@ -15,7 +15,7 @@
     <script src="{{ asset('js/admin-login.js') }}"></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 flex flex-col min-h-screen h-full">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolutefocus:z-50 mt-3 items-center p-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200">Skip to main content</a>
 
     <div class="container mx-auto p-6 pt-0" x-data="initDarkMode()" x-init="init()">
@@ -61,6 +61,8 @@
             </div>
         </main>
     </div>
+    <!-- Footer component -->
+    <x-footer />
     <x-admin-login-modal />
 </body>
 

@@ -31,6 +31,6 @@ function adminLoginModal() {
       } else {
         this.error = 'Invalid username or password';
       }
-    }
+    },
   };
 }
