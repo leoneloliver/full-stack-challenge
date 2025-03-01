@@ -11,65 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <script src="{{ asset('js/dark-mode.js') }}"></script>
     <script src="{{ asset('js/admin-login.js') }}"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const isLoggedIn = localStorage.getItem('isAdminLoggedIn');
-            if (isLoggedIn !== 'true') {
-                window.location.href = '/';
-            }
-        });
-
-
-        function companyManagement() {
-            return {
-                companies: [],
-                searchTerm: '',
-                loading: true,
-                error: null,
-
-                init() {
-                    this.fetchCompanies();
-                },
-
-                fetchCompanies() {
-                    this.loading = true;
-                    this.error = null;
-
-                    fetch('http://127.0.0.1:8000/joblists')
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error('Network response was not ok');
-                            }
-                            return response.json();
-                        })
-                        .then(data => {
-                            // Process the companies from your API
-                            this.companies = data.companies.map(company => ({
-                                id: company.id,
-                                name: company.name,
-                                jobCount: company.joblists ? company.joblists.length : 0
-                            }));
-                            this.loading = false;
-                        })
-                        .catch(error => {
-                            console.error('Error fetching companies:', error);
-                            this.error = 'Failed to load companies. Please try again.';
-                            this.loading = false;
-                        });
-                },
-
-                get filteredCompanies() {
-                    if (!this.searchTerm) return this.companies;
-
-                    const term = this.searchTerm.toLowerCase();
-                    return this.companies.filter(company =>
-                        company.name.toLowerCase().includes(term)
-                    );
-                },
-            };
-        }
-    </script>
+    <script src="{{ asset('js/admin-company-management.js') }}"></script>
 </head>
 
 <body class="bg-gray-100">
@@ -83,7 +25,6 @@
         <main id="main-content" class="bg-white shadow-md rounded-lg p-8 mb-8" x-data="companyManagement()">
             <div class="flex justify-between items-center mb-6">
                 <h1 class="text-2xl font-bold text-gray-600">Companies / Jobs</h1>
-
             </div>
 
             <!-- Search bar -->
@@ -133,7 +74,6 @@
                                         class="text-indigo-600 hover:text-indigo-900 mr-3">
                                         View Details
                                     </button>
-
                                 </td>
                             </tr>
                         </template>
@@ -152,7 +92,6 @@
     <x-company-details-modal />
 
     <script src="{{ asset('js/admin-company-details.js') }}"></script>
-
 </body>
 
 </html>
