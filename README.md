@@ -49,7 +49,7 @@
    php artisan serve
    ```
 
-Your application should now be running at `http://127.0.0.1:8080`.
+Your application should now be running at `http://127.0.0.1:8000`.
 
 ## Note
 Make sure to configure your database connection in the `.env` file before running migrations and seeders.
