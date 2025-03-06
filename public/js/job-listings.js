@@ -1,4 +1,4 @@
-// Job listings functionality
+// Job Listings
 function initJobListings() {
   return {
     jobs: [],
@@ -29,8 +29,7 @@ function initJobListings() {
     },
 
     fetchJobs() {
-      fetch('http://127.0.0.1:8000/joblists')
-        .then(response => response.json())
+      ApiService.fetchJobListings()
         .then(data => {
           this.companies = data.companies;
           this.allJobs = data.companies.flatMap(company => company.joblists);

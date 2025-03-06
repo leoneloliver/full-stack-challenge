@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Company Management
 function companyManagement() {
   return {
     companies: [],
@@ -22,13 +21,7 @@ function companyManagement() {
       this.loading = true;
       this.error = null;
 
-      fetch('http://127.0.0.1:8000/joblists')
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
+      ApiService.fetchJobListings()
         .then((data) => {
           // Process the companies from your API
           this.companies = data.companies.map((company) => ({

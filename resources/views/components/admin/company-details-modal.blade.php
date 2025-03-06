@@ -110,7 +110,7 @@
                                                 <p class="text-xs text-gray-500 mt-1">
                                                     <span x-text="job.location || 'Remote'"></span> •
                                                     <span x-text="job.position_type || 'Not specified'"></span> •
-                                                    <span x-text="job.salary ? '$' + job.salary : 'Salary not disclosed'"></span>
+                                                    <span x-text="job.salary ? job.salary : 'Salary not disclosed'"></span>
                                                 </p>
                                             </div>
                                             <p class="text-xs text-gray-500" x-text="'Posted: ' + formatDate(job.created_at)"></p>

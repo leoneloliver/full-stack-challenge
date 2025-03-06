@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <script src="{{ asset('js/dark-mode.js') }}"></script>
     <script src="{{ asset('js/admin-login.js') }}"></script>
+    <script src="{{ asset('js/api-service.js') }}"></script>
     <script src="{{ asset('js/admin-company-management.js') }}"></script>
 </head>
 

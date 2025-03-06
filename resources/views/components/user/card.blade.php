@@ -17,7 +17,14 @@
 
         <div>
             <dt class="sr-only">Position Type</dt>
-            <dd class="text-gray-600"><span class="font-bold">Type: </span><span x-text="job.position_type"></span></dd>
+            <dd class="text-gray-600">
+                <span class="font-bold">Type: </span>
+                <span x-text="job.position_type"
+                    x-bind:class="job.position_type === 'Remote' ?
+                  'bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300' :
+                  'bg-purple-100 text-purple-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-purple-900 dark:text-purple-300'">
+                </span>
+            </dd>
         </div>
 
         <div>
