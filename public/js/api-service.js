@@ -1,13 +1,16 @@
 // api-service.js
-const ApiService = {
+const baseUrl = process.env.NODE_ENV === 'production'
+  ? 'https://full-stack-challenge-3ljc.onrender.com'
+  : 'http://127.0.0.1:8000';
 
-    fetchJobListings() {
-      return fetch(`http://127.0.0.1:8000/joblists`)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        });
-    }
-  };
+const ApiService = {
+  fetchJobListings() {
+    return fetch(`${baseUrl}/joblists`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      });
+  }
+};
